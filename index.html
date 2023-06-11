@@ -1,0 +1,120 @@
+<!-- REQUIREMENTS
+1. Create an interactive application using javascript and Document object(DOM) that is user friendly
+2. Create an HTML file that includes the necessary structure for the chosen application
+3. Use Javascript to handle the project's logic and functionality
+4. Utilize the DOM to dynamically generate the interface in HTML
+5. Implement functionality to allow users to input necessary data or select from the choices
+of actions to be taken
+6. Apply CSS styling to enhance the visual presentation of the application
+7. Provide a clear instructions and guidance on how to use the application-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Inter&family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+
+    <title>Gacha Simulator</title>
+</head>
+<body>
+    <div class="title">
+        <h1>BCS23 Gacha Simulator</h1>
+    </div>
+
+    <div class="main">
+        <div class="gacha">
+            <div class="gacha-one-roll-btn">
+                <button class="gacha-button button-wrapper" onclick="rollOne()">Roll x1</button>
+            </div>
+            <div class="gacha-ten-roll-btn">
+                <button class="gacha-button button-wrapper" onclick="rollTen()">Roll x10</button>
+            </div>
+        </div>
+
+        <div class="roll">
+            <div id="photo-container">
+                <ul>
+                    <li class="diamond1">
+                      <div class="image">
+                      </div>
+                    </li>
+                    <li class="diamond2">
+                      <div class="image">
+                      </div>
+                    </li>
+                    <li class="diamond3">
+                      <div class="image">
+                      </div>
+                    </li>
+                    <li class="diamond4">
+                      <div class="image">
+                      </div>
+                    </li>
+                    <li class="diamond5">
+                      <div class="image">
+                      </div>
+                    </li>
+                    <li class="diamond6">
+                      <div class="image">
+                      </div>
+                    </li>
+                    <li class="diamond7">
+                      <div class="image">
+                      </div>
+                    </li>
+                    <li class="diamond8">
+                      <div class="image">
+                      </div>
+                    </li>
+                    <li class="diamond9">
+                      <div class="image">
+                      </div>
+                    </li>
+                    <li class="diamond10">
+                      <div class="image">
+                      </div>
+                    </li>
+                  </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="footer">
+        <div class="footer-buttons">
+            <!-- TODO: History of the pulls-->
+            <div class="footer-history-container">
+              <button class="footer-history-btn button-wrapper" onclick="showRollHistory()">History</button>
+            </div>
+
+          <!-- TODO: What is a gacha, help button for new users -->
+          <div class="footer-help-container">
+              <button class="footer-help-btn button-wrapper" onclick="showHelp()">?</button>
+          </div>
+        </div>
+
+        <p class="footer-disclaimer">v0.1 not indicative of final website</p>
+    </div>
+
+    <!-- external javascript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- 
+    IMAGE LINKS
+    1.  Host Ced - https://media.discordapp.net/attachments/1116296565095669800/1116299319423795240/IMG_8896.JPG?width=240&height=427
+    2.  Amongus Ced - https://media.discordapp.net/attachments/1116296565095669800/1116296934353809499/PlaceHolder.jpg?width=320&height=427
+    3.  Business Ced - https://media.discordapp.net/attachments/1116296565095669800/1116299339019587635/IMG_6364.JPG?width=240&height=427
+    4.  Distinguished Gentleman Ced -https://media.discordapp.net/attachments/1116296565095669800/1116299386260033546/IMG_8804.JPG?width=320&height=427
+    5.  Valentines Ced and Anthony https://media.discordapp.net/attachments/1116296565095669800/1116299404421369987/IMG_8091.JPG?width=447&height=427
+    6.  Manga Cover Anthony - https://media.discordapp.net/attachments/1116296565095669800/1116299432598708234/IMG_9021.JPG?width=320&height=427
+    7.  Spaghetti Eating Charles - https://media.discordapp.net/attachments/1116296565095669800/1116301431562051614/IMG_9202.JPG?width=292&height=389
+
+-->
