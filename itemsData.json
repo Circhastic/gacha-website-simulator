@@ -1,0 +1,147 @@
+{
+    "⭐⭐⭐": {
+        "item1": {
+            "itemName": "Poop",
+            "imageURL": "discord.com/picture.jpg"
+        },
+        "item2": {
+            "itemName": "Trash",
+            "imageURL": "discord.com/picture.jpg"
+        },
+        "item3": {
+            "itemName": "Disgusted Beastmaster Cedric",
+            "imageURL": "https://media.discordapp.net/attachments/1116314806820020294/1117731995833860177/IMG_0061.jpg?width=418&height=558"
+        },
+        "item4":{
+            "itemName":"Formal Beastmaster Cedric",
+            "itemURL":"https://media.discordapp.net/attachments/1116314806820020294/1117731995397660783/IMG_7862.jpg?width=418&height=558"
+        },
+        "item5":{
+            "itemName":"Soaked Beast-like Cedric",
+            "itemURL":"https://media.discordapp.net/attachments/1116314806820020294/1117731995045347369/IMG_5592.jpg?width=418&height=558"
+        },
+        "item6":{
+            "itemName":"Magnified Phiz Raniel",
+            "itemURL": "https://media.discordapp.net/attachments/1116314838185029662/1117725483770069002/IMG_1561.jpg?width=420&height=558"        },
+        "item7":{
+            "itemName":"Romantic Date Charles",
+            "itemURL":"https://media.discordapp.net/attachments/1116296565095669800/1116301431562051614/IMG_9202.JPG?width=418&height=558"
+        },
+        "item8":{
+            "itemName":"Casual Stuffed Raniel",
+            "itemURL":"https://media.discordapp.net/attachments/1116314806820020294/1117734916323541062/333571882_1612344672572146_56121705649313139_n.jpg?width=326&height=558"
+        },
+        "item9":{
+            "itemName":"Auditory Splitting Charles",
+            "itemURL":"https://media.discordapp.net/attachments/1116314806820020294/1117736560645918730/348359220_269657312276760_65446423631188751_n.jpg?width=426&height=558"
+        },
+        "item10":{
+            "itemName":"a",
+            "itemURL":""
+        },
+        "item11":{
+            "itemName":"a",
+            "itemURL":""
+        },
+        "item12":{
+            "itemName":"a",
+            "itemURL":""
+        },
+        "item13":{
+            "itemName":"a",
+            "itemURL":""
+        },
+        "item14":{
+            "itemName":"a",
+            "itemURL":""
+        },
+        "item15":{
+            "itemName":"a",
+            "itemURL":""
+        },
+        "item16":{
+            "itemName":"a",
+            "itemURL":""
+        },
+        "item17":{
+            "itemName":"a",
+            "itemURL":""
+        },
+        "item18":{
+            "itemName":"a",
+            "itemURL":""
+        }
+    },
+    "⭐⭐⭐⭐": {
+        "item1": {
+            "itemName": "Charles",
+            "imageURL": "discord.com/picture.jpg"
+        },
+        "item2": {
+            "itemName": "Chinese Tycoon Julian",
+            "imageURL": "https://media.discordapp.net/attachments/1116314838185029662/1117695229747793990/FB_IMG_1686549509783.jpg?width=558&height=558"
+        },
+        "item3": {
+            "itemName": "Post-Tergeo Studious Cedric", 
+            "imageURL": "https://media.discordapp.net/attachments/1116314838185029662/1117726156846809118/353660078_657385679628123_9156198541325417209_n_1.jpg?width=418&height=558"
+        },
+        "item4": {
+            "itemName": "Anthony",
+            "imageURL": "discord.com/picture.jpg"
+        },
+        "item5": {
+            "itemName": "Stylish Afro Raniel",
+            "imageURL": "https://media.discordapp.net/attachments/1116314838185029662/1117725365469708369/IMG_7509.JPG?width=535&height=558"
+        },
+        "item6":{
+            "itemName": "Dapper Gentleman Cedric",
+            "imageURL": "https://media.discordapp.net/attachments/1116314838185029662/1117727292114866237/IMG_7438.jpg?width=418&height=558"
+        },
+        "item7":{
+            "itemName":"Maximimum Maginified Phiz Raniel",
+            "itemURL":"https://media.discordapp.net/attachments/1116314806820020294/1117725403616907335/89712826_865947137203065_4661882422202204160_n.png?width=418&height=558"
+        },
+        "item8":{
+            "itemName": "4Star Charles",
+            "itemURL": "url"
+        },
+        "item9":{
+            "itemName":"4star encar",
+            "itemURL": "url" 
+        },
+        "item10":{
+            "itemName":"4star anthony",
+            "itemURL": "url"
+        }
+    },
+    "⭐⭐⭐⭐⭐": {
+        "item1": {
+            "itemName": "S Distinguished Gentlemen Cedric",
+            "imageURL": "https://media.discordapp.net/attachments/1116296565095669800/1116299386260033546/IMG_8804.JPG?width=455&height=606"
+        },
+        "item2": {
+            "itemName": "S Anime Character Anthony",
+            "imageURL": "https://cdn.discordapp.com/attachments/1116296565095669800/1116299432598708234/IMG_9021.JPG"
+        },
+        "item3":{
+            "itemName": "S Charles",
+            "imageURL": "discord.com/picture.jpg"
+        },
+        "item4":{
+            "itemName": "S Encar",
+            "imageURL": "discord.com/picture.jpg"
+        },
+        "item5": {
+            "itemName": "S Celestial Countenance Raniel",
+            "imageURL": "https://media.discordapp.net/attachments/1116314907726585866/1117725304945909780/IMG_20221104_222832.jpg?width=418&height=558"
+        }
+
+    },
+    "⭐⭐⭐⭐⭐⭐": {
+        "item1": {
+            "itemName": "SSS Jhumar",
+            "imageURL": "discord.com/picture.jpg"
+
+        }
+    }
+}
