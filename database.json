@@ -1,0 +1,29 @@
+{
+    "threeStars": {
+        "item1": {
+            "itemName": "Title",
+            "itemRarity": 3,
+            "imageURL": "discord.com/picture.jpg"
+        }
+
+    },
+    "fourStars": {
+        "item1": {
+            "itemName": "Title",
+            "itemRarity": 4,
+            "imageURL": "discord.com/picture.jpg"
+        }
+    },
+    "fiveStars": {
+        "item1": {
+            "itemName": "Distinguished Gentlemen Cedric",
+            "itemRarity": 5,
+            "imageURL": "discord.com/picture.jpg"
+        },
+        "item2": {
+            "itemName": "Title",
+            "itemRarity": 5,
+            "imageURL": "discord.com/picture.jpg"
+        }
+    }
+}

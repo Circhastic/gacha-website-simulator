@@ -83,8 +83,8 @@ function rollOne(){
     updatePity();
     
     //line of code na ito for reading the hidden div and revealing it 
-    const photocontainer = document.getElementById("photo-container");
-    photocontainer.style.display="block";
+    // const photocontainer = document.getElementById("photo-container");
+    // photocontainer.style.display="block";
 }
 
 function rollTen(){
@@ -93,8 +93,8 @@ function rollTen(){
         updatePity();
     }
     //line of code na ito for reading the hidden div and revealing it 
-    const photocontainer = document.getElementById("photo-container");
-    photocontainer.style.display="block";
+    // const photocontainer = document.getElementById("photo-container");
+    // photocontainer.style.display="block";
 }
 
 function updatePity(){

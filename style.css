@@ -1,55 +1,97 @@
 :root {
-    /* Color Pallette | Usage: var(--variableName) */
-    --accent-color: ;
-    --main-color: ;
-    --secondary-color: ;
+    /* Color Pallette Variables | Usage: var(--variableName) */
+    --primary-color: var(--maya-blue);
+    --primary-sub-color: var(--powder-blue);
+    --secondary-color: var(--oxford-blue);
+    --accent-color: var(--tropical-indigo);
+    --highlight-color: var(--powder-blue);
+
+    --maya-blue: #7dbbe4;
+    --powder-blue: #abc7f8;
+    --rich-black: #030C1C;
+    --oxford-blue: #041535;
+    --tropical-indigo: #9376ce;
 }
 
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Gloria Hallelujah', cursive;
+    /* font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Inter', sans-serif; */
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden; /* disables scroll wheel */
+  background: linear-gradient(0deg, rgba(163,133,221,1) 0%, rgba(164,190,233,1) 17%, rgba(108,189,243,1) 38%, rgba(15,37,75,1) 75%, rgba(4,21,53,1) 100%);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .title {
+    margin-top: 4rem;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
+    background: -webkit-linear-gradient(var(--primary-color), var(--accent-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .main {
-    width: 60%;
+    width: 70%;
     margin: auto;
 }
 
-.gacha, 
-.extra {
+.banner-img-container {
+  margin: auto;
+  margin-top: 2rem;
+  border-radius: 20px;
+  background-color: white;
+  width: auto;
+  max-width: 80%;
+  min-width: 600px;
+  height: 400px;
+}
+
+.banner-img-container > img {
+  background-position: center;
+}
+
+.gacha {
+    margin-top: 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.gacha-button {
+  font-size: 2em;
 }
 
 .button-wrapper {
-    width: 200px;
+    width: 250px;
+    height: 70px;
     margin: 10px;
     padding: 10px 20px;
-    border: 0.5px solid black;
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 3px 3px 3px rgb(0, 0, 0, .2);
-    color: black;
+    border: 3px solid var(--accent-color);
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 4px rgb(0, 0, 0, .2);
+    background-color: white;
+    color: var(--secondary-color);
     font-size: 16px;
     font-weight: bold;
     transition-duration: 150ms;
-    font-family: 'Gloria Hallelujah', cursive;
   }
 
 .button-wrapper:hover {
-  cursor: pointer;
+    background-color: var(--primary-sub-color);
+    cursor: pointer;
 }
 
 .button-wrapper:active {
-  background-color: rgb(229, 229, 229);
+  background-color: var(--primary-color);
   box-shadow: 0px 1px 1px 1px rgb(0, 0, 0, .2);
-  transform: scale(0.95);
+  transform: scale(0.93);
 }
 
 .footer-buttons {
@@ -61,12 +103,14 @@
 }
   
 .footer-history-btn {
-  width: 120px;
+  width: 160px;
+  height: 50px;
 }
 
 .footer-help-btn {
-  width: 50px;
-  border-radius: 100px;
+  width: 60px;
+  height: 50px;
+  border-radius: 50px;
 }
 
 .footer-disclaimer {
@@ -75,6 +119,20 @@
   bottom: 0;
 }
 
+#overlay {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgb(0, 0, 0, 0, 0.3);
+}
+
+#overlay.active {
+  opacity: 0;
+  pointer-events: all;
+}
 
 
 
@@ -107,7 +165,7 @@ ul li {
   position: absolute;
   width: 200px;
   height: 200px;
-  background-color: crimson;
+  background-color: purple;
   transform: rotate(45deg);
   margin: -100px;
   overflow: hidden;
