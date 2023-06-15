@@ -35,54 +35,28 @@ of actions to be taken
       </div>
     </div>
 
-    <div class="gacha">
-      <div class="gacha-btn-container">
-          <button class="gacha-button button-wrapper" onclick="rollOne()">Roll x1 <img src="./img/ticket-icon.png"></button>
-      </div>
-      <div class="gacha-btn-container">
-          <button class="gacha-button button-wrapper" onclick="rollFive()">Roll x5 <img src="./img/ticket-icon.png"></button>
-      </div>
-    </div>
-
     <div class="main">
+      <div class="gacha">
+          <div class="gacha-btn-container">
+              <button class="gacha-button button-wrapper" onclick="rollOne()">Roll x1 <img src="./img/ticket-icon.png"></button>
+          </div>
+          <div class="gacha-btn-container">
+              <button class="gacha-button button-wrapper" onclick="rollFive()">Roll x5 <img src="./img/ticket-icon.png"></button>
+          </div>
+      </div>
       <div class="banner" id="banner">
         
       </div>
+      <br><br>
+      
     </div>
-    
     <br>
-
-    <div class="modal-help" id="modal-help">
-      <div class="modal-help-header">
-        <div class="modal-help-header-title">
-          Help
-        </div>
-        <button class="close-button" onclick="closeHelpModal()">&times;</button>
-      </div>
-      <div class="modal-help-body">
-        Welcome to the multiverse ticket terminal! This ticket terminal will be able to 
-        pull different variants from different universes using the special roll tickets on 
-        the top right corner of the screen. The more special the character the harder it 
-        is to get them. You may even get the coveted SSS rarity character if you are lucky 
-        enough. May you be lucky in your multiverse journey today!
-
-        <br><br> <hr><br>
-
-        Odds for getting different characters below: <br>
-        3⭐ - 90% <br>
-        4⭐ - 9% <br>
-        5⭐ - 0.8% <br>
-        6⭐ - 0.2% <br>
-        
-        <br>
-
-        Every 10 pulls guarantees a 4⭐ <br>
-        Every 90 pulls guarantees a 5⭐ or 6⭐
-      </div>
-    </div>
-    <div class="modal-overlay" id="modal-overlay"></div>
     
+
     <div class="background-overlay">
+    </div>
+
+    <div class="overlay" id="overlay">
     </div>
 
     <div class="footer">
@@ -94,11 +68,11 @@ of actions to be taken
 
           <!-- TODO: What is a gacha, help button for new users -->
           <div class="footer-help-container">
-              <button class="footer-help-btn button-wrapper" id="modal-help-btn" onclick="showHelpModal()">?</button>
+              <button class="footer-help-btn button-wrapper" onclick="showHelp()">?</button>
           </div>
         </div>
 
-        <p class="footer-disclaimer">v1.4 not indicative of final website</p>
+        <p class="footer-disclaimer">v1.3 not indicative of final website</p>
     </div>
 
     <!-- external javascript -->
