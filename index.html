@@ -57,29 +57,44 @@ of actions to be taken
         <div class="modal-help-header-title">
           Help
         </div>
-        <button class="close-button" onclick="closeHelpModal()">&times;</button>
+        <button class="close-button" onclick="closeModal()">&times;</button>
       </div>
       <div class="modal-help-body">
         Welcome to the multiverse ticket terminal! This ticket terminal will be able to 
-        pull different variants from different universes using the special roll tickets on 
+        roll different variants from different universes using the special roll tickets on 
         the top right corner of the screen. The more special the character the harder it 
-        is to get them. You may even get the coveted SSS rarity character if you are lucky 
+        is to get them. You may even get the coveted rarest character if you are lucky 
         enough. May you be lucky in your multiverse journey today!
 
         <br><br> <hr><br>
 
         Odds for getting different characters below: <br>
-        3⭐ - 90% <br>
-        4⭐ - 9% <br>
-        5⭐ - 0.8% <br>
-        6⭐ - 0.2% <br>
+        3⭐⭐⭐ - 90% <br>
+        4⭐⭐⭐⭐ - 9% <br>
+        5⭐⭐⭐⭐⭐ - 0.8% <br>
+        6⭐⭐⭐⭐⭐⭐ - 0.2% <br>
         
         <br>
 
-        Every 10 pulls guarantees a 4⭐ <br>
-        Every 90 pulls guarantees a 5⭐ or 6⭐
+        Every 10 rolls guarantees a 4⭐ <br>
+        Every 90 rolls guarantees a 5⭐ or 6⭐
       </div>
     </div>
+
+    
+    <div class="modal-error" id="modal-error">
+      <div class="modal-error-header">
+        <div class="modal-error-header-title">
+          Insufficient Roll Ticket
+        </div>
+        <button class="close-button" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-error-body">
+          You do not have enough roll tickets to make a roll.
+      </div>
+    </div>
+
+
     <div class="modal-overlay" id="modal-overlay"></div>
     
     <div class="background-overlay">
@@ -98,7 +113,7 @@ of actions to be taken
           </div>
         </div>
 
-        <p class="footer-disclaimer">v1.4 not indicative of final website</p>
+        <p class="footer-disclaimer">v1.5 not indicative of final website</p>
     </div>
 
     <!-- external javascript -->

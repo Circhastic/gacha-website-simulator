@@ -144,7 +144,7 @@ const itemsData = `{
         },
         "item9":{
             "itemName":"Multiversal Observer Julian",
-            "itemURL": "https://cdn.discordapp.com/attachments/1116314806820020294/1118855509731201085/received_310980881251309.jpg" ,
+            "itemURL": "https://cdn.discordapp.com/attachments/1116314838185029662/1118873474635661362/image.png" ,
             "itemRank": "⭐⭐⭐⭐"
         },
         "item10":{
@@ -200,7 +200,7 @@ var specialPityCount = 0;
 var rarity;
 var items;
 var randomItemIndex;
-var randomItemName;
+var randomItem;
 
 const itemData = JSON.parse(itemsData);
 document.getElementById("header-tickets").innerHTML = rollTickets;
@@ -209,56 +209,56 @@ document.getElementById("header-tickets").innerHTML = rollTickets;
 function chance(rollPercent) {
 
     //Guarantee
-    if (specialPityCount == 90){ // 5 star
+    if (specialPityCount == 90) {
         if(Math.floor(Math.random() * 100) + 1 < 76 ){ // 5 star
-            randomItemName = itemRoller(5);
-            addToBanner(randomItemName);
-            console.log(rollCounter + " ⭐⭐⭐⭐⭐ " + randomItemName + " | Pity: " + specialPityCount);
+            randomItem = itemRoller("fiveStar");
+            addToBanner(randomItem);
+            console.log(rollCounter + " ⭐⭐⭐⭐⭐ " + randomItem.itemName + " | Pity: " + specialPityCount);
         }
-        else{ //6 star
-            randomItemName = itemRoller(6);
-            addToBanner(randomItemName);
-            console.log(rollCounter + " ⭐⭐⭐⭐⭐⭐ " + randomItemName + " | Pity: " + specialPityCount);
+        else { //6 star
+            randomItem = itemRoller("sixStar");
+            addToBanner(randomItem);
+            console.log(rollCounter + " ⭐⭐⭐⭐⭐⭐ " + randomItem.itemName + " | Pity: " + specialPityCount);
         }
         
         specialPityCount = 0;
             
     }   
     else if (fourPityCount % 10 == 0) { // 4 star
-        randomItemName = itemRoller(4);
-        addToBanner(randomItemName);
-        console.log(rollCounter + " ⭐⭐⭐⭐ " + randomItemName + " | Pity: " + specialPityCount);
+        randomItem = itemRoller("fourStar");
+        addToBanner(randomItem);
+        console.log(rollCounter + " ⭐⭐⭐⭐ " + randomItem.itemName + " | Pity: " + specialPityCount);
 
         fourPityCount = 0;
     }
     else { // Non guaranteed
         if (rollPercent < 90) { // No. is 1 - 89, 3 star
-            randomItemName = itemRoller(3);
-            addToBanner(randomItemName);
-            console.log(rollCounter + " ⭐⭐⭐ " + randomItemName + " | Pity: " + specialPityCount);
+            randomItem = itemRoller("threeStar");
+            addToBanner(randomItem);
+            console.log(rollCounter + " ⭐⭐⭐ " + randomItem.itemName + " | Pity: " + specialPityCount);
 
         }
         else if (rollPercent == 100) { // No. is 100, 5 and 6 star 
             if(Math.floor(Math.random() * 100) + 1 < 81 ){ // 5 star .8 percent
-                randomItemName = itemRoller(5);
-                addToBanner(randomItemName);
-                console.log(rollCounter + " ⭐⭐⭐⭐⭐ " + randomItemName + "  | Pity: " + specialPityCount);
+                randomItem = itemRoller(5);
+                addToBanner(randomItem);
+                console.log(rollCounter + " ⭐⭐⭐⭐⭐ " + randomItem.itemName + "  | Pity: " + specialPityCount);
 
                 
             }
-            else { //6 star .2 percent
-                randomItemName = itemRoller(6);
-                addToBanner(randomItemName);
-                console.log(rollCounter + " ⭐⭐⭐⭐⭐⭐ " + randomItemName + " | Pity: " + specialPityCount);
+            else { //6 star 0.2 percent
+                randomItem = itemRoller("sixStar");
+                addToBanner(randomItem);
+                console.log(rollCounter + " ⭐⭐⭐⭐⭐⭐ " + randomItem.itemName + " | Pity: " + specialPityCount);
 
             }
             
             specialPityCount = 0;
         }
-        else { // No. is 90-99,4 star
-            randomItemName = itemRoller(4);
-            addToBanner(randomItemName);
-            console.log(rollCounter + " ⭐⭐⭐⭐ " + randomItemName + " | Pity: " + specialPityCount);
+        else { // No. is 90 - 99,4 star
+            randomItem = itemRoller("fourStar");
+            addToBanner(randomItem);
+            console.log(rollCounter + " ⭐⭐⭐⭐ " + randomItem.itemName + " | Pity: " + specialPityCount);
 
             fourPityCount = 0;
         }
@@ -296,22 +296,9 @@ function addToBanner(content) {
     banner.appendChild(box);
 }
 
-function itemRoller(number) {
+function itemRoller(rarityStar) {
 
-    let rarity;
-
-    if (number == 3) {
-        rarity = itemData["threeStar"];
-    }
-    else if (number == 4) {
-        rarity = itemData["fourStar"];
-    }
-    else if (number == 5) {
-        rarity = itemData["fiveStar"];
-    }
-    else {
-        rarity = itemData["sixStar"];
-    }
+    let rarity = itemData[rarityStar];
         
     items = Object.keys(rarity);
     randomItemIndex = Math.floor(Math.random() * items.length); 
@@ -333,13 +320,9 @@ function rollOne() {
         updatePity();
     }
     else {
+        showErrorModal();
         console.log("Insufficient Tickets");
     }
-    
-    
-    //line of code na ito for reading the hidden div and revealing it 
-    // const photocontainer = document.getElementById("photo-container");
-    // photocontainer.style.display="block";
 }
 
 function rollFive() {
@@ -354,12 +337,9 @@ function rollFive() {
         }
     }
     else{
+        showErrorModal();
         console.log("Insufficient Tickets");
     }
-
-    //line of code na ito for reading the hidden div and revealing it 
-    // const photocontainer = document.getElementById("photo-container");
-    // photocontainer.style.display="block";
 }
 
 function updatePity() {
@@ -370,50 +350,27 @@ function updatePity() {
 }
 
 // For opening and closing modals (pop-ups)
-const modalHelp = document.getElementById("modal-help");
+const modalHelp = document.getElementsByClassName("modal-help")[0];
 const modalHelpBtn = document.getElementById("modal-help-btn");
-const modalOverlay = document.getElementById("modal-overlay");
+const modalError = document.getElementsByClassName("modal-error")[0];
+const modalOverlay = document.getElementsByClassName("modal-overlay")[0];
 
 function showHelpModal() {
-    modalHelp.style.display = "block";
-    modalOverlay.style.display = "block";
+    modalHelp.classList.add("active");
+    modalOverlay.classList.add("active");
 }
 
-function closeHelpModal() {
-    modalHelp.style.display = "none";
-    modalOverlay.style.display = "none";
+function showErrorModal() {
+    modalError.classList.add("active");
+    modalOverlay.classList.add("active");
+}
+
+function closeModal() {
+    modalHelp.classList.remove("active");
+    modalError.classList.remove("active");
+    modalOverlay.classList.remove("active");
 }
 
 modalOverlay.addEventListener('click', () => {
-    closeHelpModal();
+    closeModal();
 })
-
-// const openModalHelpButton = document.querySelectorAll('[data-open-help-button]');
-// const closeModalHelpButton = document.querySelectorAll('[data-close-help-button]');
-// const modalOverlay = document.getElementById("modal-overlay");
-
-// openModalHelpButton.forEach(button => {
-//     button.addEventListener('click', () => {
-//         const modal = document.querySelector(button.dataset.modalTarget);
-//         openModal(modal);
-//     })
-// })
-
-// closeModalHelpButton.forEach(button => {
-//     button.addEventListener('click', () => {
-//         const modal = document.closest('.modal-help')
-//         closeModal(modal);
-//     })
-// })
-
-// function openModal(modal) {
-//     if(modal == null) return
-//     modal.classList.add('active');
-//     modalOverlay.classList.add('active');
-// }
-
-// function openModal(modal) {
-//     if(modal == null) return
-//     modal.classList.remove('active');
-//     modalOverlay.classList.remove('active');
-// }
