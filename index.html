@@ -20,38 +20,46 @@ of actions to be taken
     <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Inter&family=Press+Start+2P&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
 
+    <link rel="icon" href="./asset/pictures/ticket-icon.png">
     <title>Gacha Simulator</title>
 </head>
 <body>
 
     <div class="title">
-        <h1>BCS23 Gacha Simulator!</h1>
+        <h1>Memory Multiverse Gacha</h1>
     </div>
 
     <div class="header">
       <div class="header-tickets">
         <span id="header-tickets"></span>
-        <img src="./img/ticket-icon.png" alt="">
-      </div>
-    </div>
-
-    <div class="gacha">
-      <div class="gacha-btn-container">
-          <button class="gacha-button button-wrapper" onclick="rollOne()">Roll x1 <img src="./img/ticket-icon.png"></button>
-      </div>
-      <div class="gacha-btn-container">
-          <button class="gacha-button button-wrapper" onclick="rollFive()">Roll x5 <img src="./img/ticket-icon.png"></button>
+        <img src="./asset/pictures/ticket-icon.png" alt="">
       </div>
     </div>
 
     <div class="main">
-      <div class="banner" id="banner">
-        
+      <div class="main-banner">
+        <div class="main-banner-img-container">
+        </div>
+      </div>
+
+    <div class="gacha">
+      <div class="gacha-btn-container">
+          <button class="gacha-button button-wrapper" onclick="rollOne()">Roll x1<img src="./asset/pictures/ticket-icon.png"></button>
+      </div>
+      <div class="gacha-btn-container">
+          <button class="gacha-button button-wrapper" onclick="rollFive()">Roll x5<img src="./asset/pictures/ticket-icon.png"></button>
+      </div>
+    </div>
+
+    <!-- Rolls Modal -->
+    <div class="modal-rolls" id="modal-rolls">
+      <div class="modal-rolls-banner" id="modal-rolls-banner">
       </div>
     </div>
     
     <br>
 
+    <!-- Help Modal -->
     <div class="modal-help" id="modal-help">
       <div class="modal-help-header">
         <div class="modal-help-header-title">
@@ -60,19 +68,19 @@ of actions to be taken
         <button class="close-button" onclick="closeModal()">&times;</button>
       </div>
       <div class="modal-help-body">
-        Welcome to the multiverse ticket terminal! This ticket terminal will be able to 
-        roll different variants from different universes using the special roll tickets on 
-        the top right corner of the screen. The more special the character the harder it 
-        is to get them. You may even get the coveted rarest character if you are lucky 
-        enough. May you be lucky in your multiverse journey today!
+        Welcome to the memory multiverse ticket terminal! This terminal will be able to 
+        roll different variants of memory characters using the special roll tickets on 
+        the top right corner of the screen. Each roll costs 1 ticket. The more special the character the harder it 
+        is to get them. You may even get the rarest character if you are lucky 
+        enough. May your rolls be fortunate in your rolling journey today!
 
         <br><br> <hr><br>
 
         Odds for getting different characters below: <br>
-        3⭐⭐⭐ - 90% <br>
-        4⭐⭐⭐⭐ - 9% <br>
-        5⭐⭐⭐⭐⭐ - 0.8% <br>
-        6⭐⭐⭐⭐⭐⭐ - 0.2% <br>
+        3⭐⭐⭐ - 90% chance<br>
+        4⭐⭐⭐⭐ - 9% chance<br>
+        5⭐⭐⭐⭐⭐ - 0.8% chance<br>
+        6⭐⭐⭐⭐⭐⭐ - 0.2% chance<br>
         
         <br>
 
@@ -81,7 +89,35 @@ of actions to be taken
       </div>
     </div>
 
-    
+    <!-- History Modal -->
+    <div class="modal-history" id="modal-history">
+      <div class="modal-history-header">
+        <div class="modal-history-header-title">
+          History
+        </div>
+        <button class="close-button" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-history-body">
+          <table id="myTable">
+            <thead>
+              <tr>
+                <th>Roll Number</th>
+                <th>Name</th>
+                <th>Rarity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+  
+    <!-- Error Modal -->
     <div class="modal-error" id="modal-error">
       <div class="modal-error-header">
         <div class="modal-error-header-title">
@@ -94,26 +130,27 @@ of actions to be taken
       </div>
     </div>
 
-
+    <!-- Overlay of all the modals -->
     <div class="modal-overlay" id="modal-overlay"></div>
-    
+    <!-- Halfton Background -->
     <div class="background-overlay">
     </div>
 
+    <!-- Footer -->
     <div class="footer">
         <div class="footer-buttons">
-            <!-- TODO: inventory of the pulls-->
-            <div class="footer-inventory-container">
-              <button class="footer-inventory-btn button-wrapper" onclick="showRollinventory()">Inventory</button>
-            </div>
+          <!-- history of the pulls-->
+          <div class="footer-history-container">
+            <button class="footer-history-btn button-wrapper" onclick="showHistoryModal()">History</button>
+          </div>
 
-          <!-- TODO: What is a gacha, help button for new users -->
+          <!-- What is a gacha, help button for new users -->
           <div class="footer-help-container">
               <button class="footer-help-btn button-wrapper" id="modal-help-btn" onclick="showHelpModal()">?</button>
           </div>
         </div>
 
-        <p class="footer-disclaimer">v1.5 not indicative of final website</p>
+        <p class="footer-disclaimer">v1.7</p>
     </div>
 
     <!-- external javascript -->
