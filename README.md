@@ -1,4 +1,4 @@
-# Memory Multiverse Gacha
+# Memory Multiverse Gacha (WARNING: OLD CODE ❗❗❗)
 A fully functional gacha simulator featuring the memories of friends from freshman and sophomore year.
 ![image](./asset/pictures/sample.png)
 
